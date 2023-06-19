@@ -23,25 +23,7 @@ public class BookingServiceImpl implements BookingService {
 		
 	}
 
-	@Override
-	public Booking modifyBooking(int bookingId,Booking book) {
-		// TODO Auto-generated method stub
-		
-		Booking b = repo.findById(bookingId).get();
-		
-		
-		if((book.getRoomId()!=0)) {
-			b.setRoomId(book.getRoomId());
-		}
-		if((book.getCheckInDate()!=null) && !"".equalsIgnoreCase(book.getCheckInDate())) {
-			b.setCheckInDate(book.getCheckInDate());
-		}
-		if((book.getCheckOutDate()!=null) && !"".equalsIgnoreCase(book.getCheckOutDate())) {
-			b.setCheckOutDate(book.getCheckOutDate());
-		}
-		return repo.save(b);
-}
-	
+
 
 	@Override
 	public void delBooking(int bookingId) {

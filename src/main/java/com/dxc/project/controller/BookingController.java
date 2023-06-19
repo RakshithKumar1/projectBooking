@@ -24,10 +24,6 @@ public class BookingController {
 		return service.makeBooking(book);
 	}
 	
-	@PutMapping("modifyBooking/{bookingId}")
-	public Booking editBooking(@PathVariable("bookingId") int bookingId, @RequestBody Booking book) {
-		return service.modifyBooking(bookingId, book);
-	}
 	
 	@DeleteMapping("cancelBooking/{bookingId}")
 	public void deleteBooking(@PathVariable int bookingId) {
